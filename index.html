@@ -151,6 +151,16 @@
     color:var(--blue); text-decoration:none; text-transform:uppercase; font-weight:600;
   }
 
+  .radio-section{
+    display:grid; grid-template-columns:1fr 1.3fr; gap:50px; align-items:center; margin-top:50px;
+  }
+  .radio-flyer{
+    aspect-ratio:4/5; background-color:rgba(233,238,247,0.05); background-size:cover; background-position:center;
+    border:1px solid var(--line); border-radius:4px;
+  }
+  .radio-info h3{ font-size:26px; font-weight:400; margin-bottom:14px; }
+  .radio-info p{ font-family:'Helvetica Neue', Arial, sans-serif; font-size:15px; color:rgba(233,238,247,0.65); margin-bottom:26px; max-width:420px; }
+
   footer{ padding:60px 8vw; display:flex; flex-direction:column; gap:26px; }
   footer .footer-top{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px; }
   footer .note{ margin:0; }
@@ -165,6 +175,7 @@
     .router{ grid-template-columns:1fr 1fr; }
     .disco-grid{ grid-template-columns:1fr 1fr; }
     .events-grid{ grid-template-columns:1fr; }
+    .radio-section{ grid-template-columns:1fr; }
     .form-mock{ grid-template-columns:1fr; }
     .stat-row{ gap:34px; }
   }
@@ -199,13 +210,26 @@
       <div><h3>Music &amp; Remixes</h3><p>1000+ track catalog, streaming links, latest drops</p></div>
       <div class="arrow">Listen &rarr;</div>
     </a>
-    <div class="router-card">
+    <a href="https://masalaradio.com" target="_blank" rel="noopener" class="router-card" style="text-decoration:none; color:inherit;">
       <div><h3>Afternoon Ride</h3><p>Radio show on Masala 98.7 FM &mdash; latest episode</p></div>
       <div class="arrow">Tune in &rarr;</div>
-    </div>
+    </a>
     <div class="router-card">
       <div><h3>Press / Media Kit</h3><p>Bio, stats, logos, high-res photos &mdash; one download</p></div>
       <div class="arrow">Download &rarr;</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Afternoon Ride</div>
+  <h2 style="font-size:30px;">On air every weekday on Masala 98.7 FM.</h2>
+  <div class="radio-section">
+    <div class="radio-flyer" style="background-image:url('/public/images/radio-show-flyer.jpg')"></div>
+    <div class="radio-info">
+      <h3>The Afternoon Ride Mix Show</h3>
+      <p>Bollywood, remixes, and mashups for Houston's South Asian community &mdash; live on Masala Radio 98.7 FM.</p>
+      <a href="https://masalaradio.com" target="_blank" rel="noopener" class="btn solid" style="display:inline-block; text-decoration:none;">Listen Live</a>
     </div>
   </div>
 </section>
