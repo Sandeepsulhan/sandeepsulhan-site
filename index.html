@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sandeep Sulhan — DJ, Producer & Radio Host</title>
+<style>
+  :root{
+    --ink:#060A14;
+    --ivory:#E9EEF7;
+    --blue:#3E7BFA;
+    --blue-deep:#12224D;
+    --steel:#5C7DA6;
+    --line: rgba(233,238,247,0.16);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--ink);
+    color:var(--ivory);
+    font-family: Georgia, 'Iowan Old Style', serif;
+    line-height:1.5;
+  }
+  section{
+    padding:110px 8vw 100px;
+    border-bottom:1px solid var(--line);
+    position:relative;
+  }
+  .eyebrow{
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    font-size:12px; letter-spacing:0.2em; text-transform:uppercase;
+    color:var(--blue); margin-bottom:18px; font-weight:600;
+  }
+  h1,h2{ font-weight:400; letter-spacing:-0.01em; }
+  .note{
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    font-size:13px; color:rgba(233,238,247,0.55);
+    max-width:520px; margin-top:14px; line-height:1.6;
+  }
+
+  .hero{
+    min-height:100vh; display:flex; flex-direction:column; justify-content:center;
+    padding-top:150px;
+    background:
+      linear-gradient(180deg, rgba(6,10,20,0.55), rgba(6,10,20,0.92)),
+      url('/images/hero-photo.jpg') center/cover no-repeat;
+  }
+  /* PLACEHOLDER: replace /images/hero-photo.jpg with a wide event or DJ-booth shot */
+  .hero h1{ font-size:clamp(42px, 7vw, 96px); max-width:14ch; }
+  .hero .accent{ color:var(--blue-deep); font-style:italic; }
+  .hero-sub{
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    font-size:18px; max-width:520px; margin-top:24px; color:rgba(233,238,247,0.8);
+  }
+  .beat-strip{
+    display:flex; gap:14px; margin-top:56px; align-items:center;
+    font-family:'Courier New', monospace; font-size:13px; letter-spacing:0.15em;
+    color:var(--steel); flex-wrap:wrap;
+  }
+  .beat-strip span{
+    background:rgba(29,78,74,0.25); border:1px solid var(--steel);
+    padding:6px 14px; border-radius:2px; color:var(--ivory);
+  }
+  .stat-row{
+    display:flex; gap:60px; margin-top:70px; flex-wrap:wrap;
+  }
+  .stat b{
+    font-size:38px; display:block; color:var(--blue); font-weight:400;
+  }
+  .stat span{
+    font-family:'Helvetica Neue', Arial, sans-serif; font-size:12px;
+    letter-spacing:0.1em; text-transform:uppercase; color:rgba(233,238,247,0.6);
+  }
+  .hero-cta{ display:flex; gap:16px; margin-top:56px; flex-wrap:wrap; }
+  .btn{
+    font-family:'Helvetica Neue', Arial, sans-serif; font-size:13px;
+    letter-spacing:0.08em; text-transform:uppercase; padding:16px 28px;
+    border-radius:2px; cursor:pointer; font-weight:600;
+  }
+  .btn.solid{ background:var(--blue); color:var(--ink); border:none; }
+  .btn.outline{ background:transparent; color:var(--ivory); border:1px solid var(--line); }
+
+  .router{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); padding:0; }
+  .router-card{
+    background:var(--ink); padding:44px 28px; min-height:220px;
+    display:flex; flex-direction:column; justify-content:space-between;
+  }
+  .router-card h3{ font-size:22px; font-weight:400; }
+  .router-card p{ font-family:'Helvetica Neue', Arial, sans-serif; font-size:13px; color:rgba(233,238,247,0.6); margin-top:10px;}
+  .router-card .arrow{ font-family:'Helvetica Neue',sans-serif; font-size:13px; color:var(--blue); margin-top:18px; }
+
+  .player-mock{
+    margin-top:50px; background:rgba(233,238,247,0.04); border:1px solid var(--line);
+    border-radius:4px; padding:30px; display:flex; align-items:center; gap:24px;
+  }
+  .waveform{ flex:1; height:56px; display:flex; align-items:flex-end; gap:3px; }
+  .waveform div{ background:var(--blue); width:4px; }
+  .play-btn{
+    width:56px; height:56px; border-radius:50%; background:var(--blue);
+    display:flex; align-items:center; justify-content:center; color:var(--ink);
+    font-size:20px; flex-shrink:0;
+  }
+
+  .disco-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:50px; }
+  .disco-tile{
+    aspect-ratio:1; background-color:rgba(233,238,247,0.05); background-size:cover; background-position:center;
+    border:1px solid var(--line);
+    display:flex; align-items:flex-end; padding:18px; font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:13px; color:rgba(233,238,247,0.9);
+    text-shadow:0 2px 8px rgba(6,10,20,0.9);
+  }
+
+  .press-strip{
+    display:flex; gap:50px; margin-top:50px; flex-wrap:wrap;
+    font-family:'Helvetica Neue', Arial, sans-serif; font-size:15px;
+    letter-spacing:0.05em; color:rgba(233,238,247,0.45); text-transform:uppercase;
+  }
+
+  .dhol-strip{
+    background:var(--blue-deep); color:var(--ivory); padding:70px 8vw;
+    border-bottom:1px solid var(--line);
+  }
+  .dhol-strip .eyebrow{ color:var(--ink); }
+  .bol-line{
+    font-family:'Courier New', monospace; font-size:clamp(20px,3vw,32px);
+    letter-spacing:0.1em; margin-top:20px;
+  }
+
+  .form-mock{ margin-top:50px; display:grid; grid-template-columns:1fr 1fr; gap:20px; max-width:640px; }
+  .field{
+    border:1px solid var(--line); padding:16px; font-family:'Helvetica Neue', Arial, sans-serif;
+    font-size:13px; color:rgba(233,238,247,0.4);
+  }
+
+  footer{ padding:60px 8vw; display:flex; flex-direction:column; gap:26px; }
+  footer .footer-top{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px; }
+  footer .note{ margin:0; }
+  .social-row{
+    display:flex; gap:24px; flex-wrap:wrap;
+    font-family:'Helvetica Neue', Arial, sans-serif; font-size:13px;
+    letter-spacing:0.05em; color:rgba(233,238,247,0.7);
+  }
+  .social-row span{ color:var(--blue); }
+
+  @media (max-width:760px){
+    .router{ grid-template-columns:1fr 1fr; }
+    .disco-grid{ grid-template-columns:1fr 1fr; }
+    .form-mock{ grid-template-columns:1fr; }
+    .stat-row{ gap:34px; }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="eyebrow">Houston, TX · DJ / Producer / Radio Host</div>
+  <h1>25 years behind<br>the <span class="accent">decks.</span><br>Still the beat<br>you remember.</h1>
+  <p class="hero-sub">Two-Time Dhol Champion Turned DJ &amp; Music Producer. Official Bollywood remixer for T-Series, Zee Music, YRF, Sony Music India &amp; Universal Music India. Host of the Afternoon Ride Mix Show.</p>
+
+  <div class="stat-row">
+    <div class="stat"><b>1000+</b><span>Remixes Produced</span></div>
+    <div class="stat"><b>25+</b><span>Years Experience</span></div>
+    <div class="stat"><b>2&times;</b><span>Dhol Champion</span></div>
+    <div class="stat"><b>5</b><span>Original Releases</span></div>
+  </div>
+
+  <div class="hero-cta">
+    <button class="btn solid">Book Sandeep</button>
+    <button class="btn outline">Play Latest Mix &#9656;</button>
+  </div>
+</section>
+
+<section style="padding:0;">
+  <div style="padding:70px 8vw 40px;">
+    <div class="eyebrow">Where do you want to go?</div>
+    <h2 style="font-size:28px;">Four kinds of people land here. Send them straight where they need to go.</h2>
+  </div>
+  <div class="router">
+    <div class="router-card">
+      <div><h3>Book an Event</h3><p>Weddings, corporate, private &mdash; DJ &amp; emcee packages</p></div>
+      <div class="arrow">View packages &rarr;</div>
+    </div>
+    <div class="router-card">
+      <div><h3>Music &amp; Remixes</h3><p>1000+ track catalog, streaming links, latest drops</p></div>
+      <div class="arrow">Listen &rarr;</div>
+    </div>
+    <div class="router-card">
+      <div><h3>Afternoon Ride</h3><p>Radio show on Masala 98.7 FM &mdash; latest episode</p></div>
+      <div class="arrow">Tune in &rarr;</div>
+    </div>
+    <div class="router-card">
+      <div><h3>Press / Media Kit</h3><p>Bio, stats, logos, high-res photos &mdash; one download</p></div>
+      <div class="arrow">Download &rarr;</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Latest Mix</div>
+  <h2 style="font-size:30px;">Hear it before you read another word about it.</h2>
+  <p class="note">Real YouTube embed below &mdash; swap YOUR_VIDEO_ID for your latest upload's ID once ready.</p>
+  <div class="player-mock" style="padding:0; overflow:hidden;">
+    <iframe style="width:100%; aspect-ratio:16/9; border:none; display:block;"
+      src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+      title="Latest mix" allowfullscreen></iframe>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Discography</div>
+  <h2 style="font-size:30px;">A catalog most DJs don't have.</h2>
+  <p class="note">Filterable grid &mdash; by label, by year, remix vs. original. Real thumbnails/cover art in final build.</p>
+  <div class="disco-grid">
+    <!-- PLACEHOLDER: swap background-image url for each cover once cover art is ready -->
+    <div class="disco-tile" style="background-image:url('/images/release-1.jpg')">T-Series Remix Pack Vol. 3</div>
+    <div class="disco-tile" style="background-image:url('/images/release-2.jpg')">Original &mdash; "Rise"</div>
+    <div class="disco-tile" style="background-image:url('/images/release-3.jpg')">Zee Music Mashup Series</div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Trusted By</div>
+  <div class="press-strip">
+    <span>T-Series</span><span>Zee Music</span><span>YRF</span>
+    <span>Sony Music India</span><span>Universal Music India</span>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Book Sandeep</div>
+  <h2 style="font-size:30px;">Skip the back-and-forth email.</h2>
+  <div class="form-mock">
+    <div class="field">Event type &#9662;</div>
+    <div class="field">Date</div>
+    <div class="field">City</div>
+    <div class="field">Guest count</div>
+  </div>
+</section>
+
+<footer>
+  <div class="social-row">
+    <div><span>Facebook</span> @sandeepsulhan</div>
+    <div><span>Instagram</span> @sandeepsulhan</div>
+    <div><span>TikTok</span> @sandeepsulhan</div>
+    <div><span>Snapchat</span> @sandeepsulhan</div>
+    <div><span>YouTube</span> @sandeepsulhan</div>
+  </div>
+  <div class="footer-top">
+    <div class="note">&copy; Sandeep Sulhan &middot; Desi By Nature Inc.</div>
+    <div class="note">Try PrimeDJ live at your next event &rarr;</div>
+  </div>
+</footer>
+
+</body>
+</html>
