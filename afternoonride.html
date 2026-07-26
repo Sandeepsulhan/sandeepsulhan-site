@@ -41,8 +41,9 @@
 
   .layout{ display:grid; grid-template-columns:1fr 1.1fr; gap:60px; align-items:start; }
   .flyer{
-    width:100%; aspect-ratio:4/5; background-color:rgba(233,238,247,0.05); background-size:cover; background-position:center;
+    width:100%; max-width:520px;
     border:1px solid var(--line); border-radius:6px;
+    display:block;
   }
   .info h2{ font-size:26px; font-weight:400; margin-bottom:18px; }
   .info p{
@@ -68,10 +69,9 @@
 
 <main>
   <div class="eyebrow">Afternoon Ride</div>
-  <h1>The Afternoon Ride Mix Show &mdash; on air every weekday on Masala 98.7 FM.</h1>
 
   <div class="layout">
-    <div class="flyer" style="background-image:url('/public/images/radio-show-flyer.jpg')"></div>
+    <img class="flyer" src="/public/images/radio-show-flyer.jpg" alt="Afternoon Ride Mix Show flyer">
     <div class="info">
       <h2>Houston's Afternoon Ride</h2>
       <p>Bollywood, remixes, and mashups for Houston's South Asian community. Hosted live by Sandeep Sulhan on Masala Radio 98.7 FM.</p>
