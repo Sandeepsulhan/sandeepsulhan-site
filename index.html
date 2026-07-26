@@ -110,10 +110,14 @@
   }
 
   .press-strip{
-    display:flex; gap:50px; margin-top:50px; flex-wrap:wrap;
-    font-family:'Helvetica Neue', Arial, sans-serif; font-size:15px;
-    letter-spacing:0.05em; color:rgba(233,238,247,0.45); text-transform:uppercase;
+    display:flex; gap:36px; margin-top:50px; flex-wrap:wrap; align-items:center;
   }
+  .press-strip .logo-card{
+    background:#fff; border-radius:6px; padding:16px 22px;
+    display:flex; align-items:center; justify-content:center;
+    height:60px;
+  }
+  .press-strip .logo-card img{ max-height:100%; max-width:140px; object-fit:contain; display:block; }
 
   .dhol-strip{
     background:var(--blue-deep); color:var(--ivory); padding:70px 8vw;
@@ -245,8 +249,11 @@
 <section>
   <div class="eyebrow">Trusted By</div>
   <div class="press-strip">
-    <span>T-Series</span><span>Zee Music</span><span>YRF</span>
-    <span>Sony Music India</span><span>Universal Music India</span>
+    <div class="logo-card"><img src="/public/images/t-series-logo.png" alt="T-Series"></div>
+    <div class="logo-card"><img src="/public/images/zee-music-logo.png" alt="Zee Music Co."></div>
+    <div class="logo-card"><img src="/public/images/yrf-logo.png" alt="YRF Entertainment"></div>
+    <div class="logo-card"><img src="/public/images/sony-music-logo.png" alt="Sony Music India"></div>
+    <div class="logo-card"><img src="/public/images/universal-music-logo.png" alt="Universal Music India"></div>
   </div>
 </section>
 
