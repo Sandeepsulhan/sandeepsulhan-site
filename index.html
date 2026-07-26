@@ -131,6 +131,26 @@
     font-size:13px; color:rgba(233,238,247,0.4);
   }
 
+  .events-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:50px; }
+  .event-card{
+    border:1px solid var(--line); border-radius:4px; overflow:hidden;
+    display:flex; flex-direction:column;
+  }
+  .event-flyer{
+    aspect-ratio:4/5; background-color:rgba(233,238,247,0.05); background-size:cover; background-position:center;
+  }
+  .event-info{ padding:18px; }
+  .event-info .event-date{
+    font-family:'Helvetica Neue', Arial, sans-serif; font-size:12px; letter-spacing:0.1em;
+    text-transform:uppercase; color:var(--blue); margin-bottom:8px;
+  }
+  .event-info h3{ font-size:19px; font-weight:400; margin-bottom:6px; }
+  .event-info p{ font-family:'Helvetica Neue', Arial, sans-serif; font-size:13px; color:rgba(233,238,247,0.6); margin-bottom:14px; }
+  .event-info a{
+    font-family:'Helvetica Neue', Arial, sans-serif; font-size:13px; letter-spacing:0.05em;
+    color:var(--blue); text-decoration:none; text-transform:uppercase; font-weight:600;
+  }
+
   footer{ padding:60px 8vw; display:flex; flex-direction:column; gap:26px; }
   footer .footer-top{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px; }
   footer .note{ margin:0; }
@@ -144,6 +164,7 @@
   @media (max-width:760px){
     .router{ grid-template-columns:1fr 1fr; }
     .disco-grid{ grid-template-columns:1fr 1fr; }
+    .events-grid{ grid-template-columns:1fr; }
     .form-mock{ grid-template-columns:1fr; }
     .stat-row{ gap:34px; }
   }
@@ -175,14 +196,14 @@
     <h2 style="font-size:28px;">Four kinds of people land here. Send them straight where they need to go.</h2>
   </div>
   <div class="router">
-    <div class="router-card">
+    <a href="https://www.desijunctiondjs.com/profile/sandeep-sulhan" target="_blank" rel="noopener" class="router-card" style="text-decoration:none; color:inherit;">
       <div><h3>Book an Event</h3><p>Weddings, corporate, private &mdash; DJ &amp; emcee packages</p></div>
       <div class="arrow">View packages &rarr;</div>
-    </div>
-    <div class="router-card">
+    </a>
+    <a href="https://hearthis.at/sandeepsulhan" target="_blank" rel="noopener" class="router-card" style="text-decoration:none; color:inherit;">
       <div><h3>Music &amp; Remixes</h3><p>1000+ track catalog, streaming links, latest drops</p></div>
       <div class="arrow">Listen &rarr;</div>
-    </div>
+    </a>
     <div class="router-card">
       <div><h3>Afternoon Ride</h3><p>Radio show on Masala 98.7 FM &mdash; latest episode</p></div>
       <div class="arrow">Tune in &rarr;</div>
@@ -226,14 +247,48 @@
 </section>
 
 <section>
-  <div class="eyebrow">Book Sandeep</div>
-  <h2 style="font-size:30px;">Skip the back-and-forth email.</h2>
-  <div class="form-mock">
-    <div class="field">Event type &#9662;</div>
-    <div class="field">Date</div>
-    <div class="field">City</div>
-    <div class="field">Guest count</div>
+  <div class="eyebrow">Upcoming Events</div>
+  <h2 style="font-size:30px;">Catch the next set live.</h2>
+  <p class="note">Flyer placeholders below &mdash; drop real flyers into /images/event-1.jpg, event-2.jpg, event-3.jpg and swap the details/ticket links for each show.</p>
+  <div class="events-grid">
+    <div class="event-card">
+      <div class="event-flyer" style="background-image:url('/images/event-1.jpg')"></div>
+      <div class="event-info">
+        <div class="event-date">Date &middot; City</div>
+        <h3>Event Name</h3>
+        <p>Venue, short details</p>
+        <a href="#" target="_blank" rel="noopener">Get Tickets &rarr;</a>
+      </div>
+    </div>
+    <div class="event-card">
+      <div class="event-flyer" style="background-image:url('/images/event-2.jpg')"></div>
+      <div class="event-info">
+        <div class="event-date">Date &middot; City</div>
+        <h3>Event Name</h3>
+        <p>Venue, short details</p>
+        <a href="#" target="_blank" rel="noopener">Get Tickets &rarr;</a>
+      </div>
+    </div>
+    <div class="event-card">
+      <div class="event-flyer" style="background-image:url('/images/event-3.jpg')"></div>
+      <div class="event-info">
+        <div class="event-date">Date &middot; City</div>
+        <h3>Event Name</h3>
+        <p>Venue, short details</p>
+        <a href="#" target="_blank" rel="noopener">Get Tickets &rarr;</a>
+      </div>
+    </div>
   </div>
+</section>
+
+<section>
+  <div class="eyebrow">Get In Touch</div>
+  <h2 style="font-size:30px;">Say hi, or just follow along.</h2>
+  <p class="note" style="margin-top:18px; font-size:16px;">
+    <a href="mailto:sandeepsulhan@gmail.com" style="color:var(--blue); text-decoration:none; font-weight:600;">sandeepsulhan@gmail.com</a>
+  </p>
+  <p class="note" style="margin-top:14px;">For bookings, use the "Book an Event" link above. For everything else &mdash; press, collabs, or just to say what's up &mdash; email works best.</p>
+  <p class="note" style="margin-top:26px;">Follow along on Facebook, Instagram, TikTok, Snapchat, and YouTube &mdash; @sandeepsulhan.</p>
 </section>
 
 <footer>
