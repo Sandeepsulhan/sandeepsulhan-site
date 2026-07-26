@@ -38,19 +38,22 @@
   }
 
   .hero{
-    min-height:100vh; display:flex; flex-direction:column; justify-content:center;
+    min-height:100vh; display:grid; grid-template-columns:1.3fr 1fr; align-items:center; gap:60px;
     padding-top:150px;
-    background:
-      linear-gradient(180deg, rgba(6,10,20,0.55), rgba(6,10,20,0.92)),
-      url('/public/images/hero-photo.jpg') center/cover no-repeat;
+    background:var(--ink);
   }
-  /* PLACEHOLDER: replace /images/hero-photo.jpg with a wide event or DJ-booth shot */
   .hero h1{ font-size:clamp(42px, 7vw, 96px); max-width:14ch; }
   .hero .accent{ color:var(--blue-deep); font-style:italic; }
   .hero-sub{
     font-family:'Helvetica Neue', Arial, sans-serif;
     font-size:18px; max-width:520px; margin-top:24px; color:rgba(233,238,247,0.8);
   }
+  .hero-video-wrap{
+    justify-self:center; width:100%; max-width:340px; aspect-ratio:9/16;
+    border-radius:16px; overflow:hidden; border:1px solid var(--line);
+    box-shadow:0 30px 80px rgba(0,0,0,0.5);
+  }
+  .hero-video-wrap video{ width:100%; height:100%; object-fit:cover; display:block; }
   .beat-strip{
     display:flex; gap:14px; margin-top:56px; align-items:center;
     font-family:'Courier New', monospace; font-size:13px; letter-spacing:0.15em;
@@ -170,6 +173,10 @@
   }
   .social-row span{ color:var(--blue); }
 
+  @media (max-width:900px){
+    .hero{ grid-template-columns:1fr; }
+    .hero-video-wrap{ margin-top:40px; max-width:280px; }
+  }
   @media (max-width:760px){
     .router{ grid-template-columns:1fr 1fr; }
     .disco-grid{ grid-template-columns:1fr 1fr; }
@@ -183,15 +190,21 @@
 <body>
 
 <section class="hero">
-  <div class="eyebrow">Houston, TX · DJ / Producer / Radio Host</div>
-  <h1>25 years behind<br>the <span class="accent">decks.</span><br>Still the beat<br>you remember.</h1>
-  <p class="hero-sub">Two-Time Dhol Champion Turned DJ &amp; Music Producer. Official Bollywood remixer for T-Series, Zee Music, YRF, Sony Music India &amp; Universal Music India. Host of the Afternoon Ride Mix Show.</p>
+  <div>
+    <div class="eyebrow">Houston, TX · DJ / Producer / Radio Host</div>
+    <h1>25 years behind<br>the <span class="accent">decks.</span><br>Still the beat<br>you remember.</h1>
+    <p class="hero-sub">Two-Time Dhol Champion Turned DJ &amp; Music Producer. Official Bollywood remixer for T-Series, Zee Music, YRF, Sony Music India &amp; Universal Music India. Host of the Afternoon Ride Mix Show.</p>
 
-  <div class="stat-row">
-    <div class="stat"><b>1000+</b><span>Remixes Produced</span></div>
-    <div class="stat"><b>25+</b><span>Years Experience</span></div>
-    <div class="stat"><b>2&times;</b><span>Dhol Champion</span></div>
-    <div class="stat"><b>5</b><span>Original Releases</span></div>
+    <div class="stat-row">
+      <div class="stat"><b>1000+</b><span>Remixes Produced</span></div>
+      <div class="stat"><b>25+</b><span>Years Experience</span></div>
+      <div class="stat"><b>2&times;</b><span>Dhol Champion</span></div>
+      <div class="stat"><b>5</b><span>Original Releases</span></div>
+    </div>
+  </div>
+
+  <div class="hero-video-wrap">
+    <video src="/public/images/hero-reel.mp4" autoplay muted loop playsinline></video>
   </div>
 </section>
 
