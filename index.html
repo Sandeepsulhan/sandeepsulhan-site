@@ -192,6 +192,17 @@
     .primedj-logo{ margin:0 auto; }
   }
 
+  .social-icons{
+    display:flex; gap:20px; margin-top:32px; flex-wrap:wrap;
+  }
+  .social-icons a{
+    width:48px; height:48px; border-radius:50%;
+    border:1px solid var(--line); display:flex; align-items:center; justify-content:center;
+    color:var(--ivory); transition:border-color 0.2s, color 0.2s;
+  }
+  .social-icons a:hover{ border-color:var(--blue); color:var(--blue); }
+  .social-icons svg{ width:22px; height:22px; }
+
   footer{ padding:60px 8vw; display:flex; flex-direction:column; gap:26px; }
   footer .footer-top{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px; }
   footer .note{ margin:0; }
@@ -350,23 +361,33 @@
 </section>
 
 <section>
-  <div class="eyebrow">Get In Touch</div>
+  <div class="eyebrow">Get In Touch &amp; Follow</div>
   <h2 style="font-size:30px;">Say hi, or just follow along.</h2>
   <p class="note" style="margin-top:18px; font-size:16px;">
     <a href="mailto:sandeepsulhan@gmail.com" style="color:var(--blue); text-decoration:none; font-weight:600;">sandeepsulhan@gmail.com</a>
   </p>
   <p class="note" style="margin-top:14px;">For bookings, use the "Book an Event" link above. For everything else &mdash; press, collabs, or just to say what's up &mdash; email works best.</p>
-  <p class="note" style="margin-top:26px;">Follow along on Facebook, Instagram, TikTok, Snapchat, and YouTube &mdash; @sandeepsulhan.</p>
+
+  <div class="social-icons">
+    <a href="https://www.facebook.com/sandeep.d.sulhan" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V8c0-.9.25-1.5 1.55-1.5H16.7V3.7C16.4 3.65 15.4 3.55 14.2 3.55c-2.4 0-4 1.45-4 4.15v2.25H7.5v3.1h2.7v8h3.3z"/></svg>
+    </a>
+    <a href="https://instagram.com/sandeepsulhan" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a href="https://www.tiktok.com/@sandeepsulhan" target="_blank" rel="noopener" aria-label="TikTok">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.4 2.2 1.9 3.7 4 3.9v2.7c-1.4 0-2.7-.4-3.9-1.2v6.4c0 3-2.4 5.4-5.4 5.4S5.8 17.8 5.8 14.8c0-2.9 2.2-5.2 5.1-5.4v2.8c-1.3.2-2.3 1.3-2.3 2.6 0 1.5 1.2 2.7 2.7 2.7s2.7-1.2 2.7-2.7V3h2.5z"/></svg>
+    </a>
+    <a href="https://www.snapchat.com/add/sandeepsulhan" target="_blank" rel="noopener" aria-label="Snapchat">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c2.5 0 4 1.7 4.1 4.1.05.9 0 1.7-.05 2.3.5.25 1.1.5 1.5.6.35.1.55.45.45.8-.15.5-.9.85-2.15 1.15-.05.2-.1.4-.2.65.6.9 1.6 1.5 2.75 1.7.3.05.5.35.45.65-.15.75-1.55 1.05-2.35 1.15-.1.3-.2.65-.35.9-.1.2-.35.3-.6.25-.5-.1-1.1-.15-1.7 0-.6.15-1.15.5-1.75.85-.6.35-1.25.7-2.1.7s-1.5-.35-2.1-.7c-.6-.35-1.15-.7-1.75-.85-.6-.15-1.2-.1-1.7 0-.25.05-.5-.05-.6-.25-.15-.25-.25-.6-.35-.9-.8-.1-2.2-.4-2.35-1.15-.05-.3.15-.6.45-.65 1.15-.2 2.15-.8 2.75-1.7-.1-.25-.15-.45-.2-.65-1.25-.3-2-.65-2.15-1.15-.1-.35.1-.7.45-.8.4-.1 1-.35 1.5-.6-.05-.6-.1-1.4-.05-2.3C8 4.7 9.5 3 12 3z"/></svg>
+    </a>
+    <a href="https://youtube.com/sandeepsulhan" target="_blank" rel="noopener" aria-label="YouTube">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.5 7.5c-.2-1.1-1-1.9-2.1-2.1C17.6 5 12 5 12 5s-5.6 0-7.4.4c-1.1.2-1.9 1-2.1 2.1C2 9.3 2 12 2 12s0 2.7.4 4.5c.2 1.1 1 1.9 2.1 2.1C6.4 19 12 19 12 19s5.6 0 7.4-.4c1.1-.2 1.9-1 2.1-2.1C22 14.7 22 12 22 12s0-2.7-.5-4.5zM10 15.2V8.8L15.8 12 10 15.2z"/></svg>
+    </a>
+  </div>
 </section>
 
 <footer>
-  <div class="social-row">
-    <div><span>Facebook</span> @sandeepsulhan</div>
-    <div><span>Instagram</span> @sandeepsulhan</div>
-    <div><span>TikTok</span> @sandeepsulhan</div>
-    <div><span>Snapchat</span> @sandeepsulhan</div>
-    <div><span>YouTube</span> @sandeepsulhan</div>
-  </div>
   <div class="footer-top">
     <div class="note">&copy; Sandeep Sulhan &middot; Desi By Nature Inc.</div>
     <div class="note">Try PrimeDJ live at your next event &rarr;</div>
